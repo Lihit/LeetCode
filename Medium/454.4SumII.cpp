@@ -29,30 +29,22 @@ using namespace std;
 class Solution {
 public:
     int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
-        int n = A.size(), ret = 0;
-        if(n==0) return ret;
-        sort(A.begin(), A.end());
-        sort(B.begin(), B.end());
-        sort(C.begin(), C.end());
-        sort(D.begin(), D.end());
-        if (A[n - 1] + B[n - 1] + C[n - 1] + D[n - 1] < 0) return ret;
-        for (int i = 0; i < n; i++) {
-            if (A[i] + B[0] + C[0] + D[0] > 0) break;
-            if (A[i] + B[n - 1] + C[n - 1] + D[n - 1] < 0) continue;
-            for (int j = 0; j < n; j++) {
-                if (A[i] + B[j] + C[0] + D[0] > 0) break;
-                if (A[i] + B[j] + C[n - 1] + D[n - 1] < 0) continue;
-                for (int k = 0; k < n; k++) {
-                    if (A[i] + B[j] + C[k] + D[0] > 0) break;
-                    if (A[i] + B[j] + C[k] + D[n - 1] < 0) continue;
-                    for (int q = 0; q < n; q++) {
-                        if (A[i] + B[j] + C[k] + D[q] > 0) break;
-                        if (A[i] + B[j] + C[k] + D[q] == 0) ret++;
-                    }
+        unordered_map<int, int>  abSum;
+        for(auto a : A) {
+            for(auto b : B) {
+                ++abSum[a+b];
+            }
+        }
+        int count = 0;
+        for(auto c : C) {
+            for(auto d : D) {
+                auto it = abSum.find(0 - c - d);
+                if(it != abSum.end()) {
+                    count += it->second;
                 }
             }
         }
-        return ret;
+        return count;
     }
 };
 int main(int argc, char const *argv[])
