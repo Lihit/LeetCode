@@ -1,6 +1,5 @@
 import collections
 
-
 class TreeNode(object):
 
     def __init__(self, x):
