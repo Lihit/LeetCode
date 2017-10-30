@@ -22,25 +22,17 @@ class Solution {
 public:
     string convert(string s, int numRows) {
         int slen = s.size();
-        if(numRows==1) return s;
+        if(numRows>=slen || numRows==1) return s;
         string ret;
         for (int i = 0; i < numRows; i++) {
-            if (i == 0 || i == numRows - 1) {
-                for (int j = 0;; j++) {
-                    if (2 * j * (numRows - 1) + i >= slen) break;
+            for (int j = 0;; j++) {
+                if (2 * j * (numRows - 1) + i >= slen) break;
+                else {
+                    ret += s[2 * j * (numRows - 1) + i];
+                    if(i==0 || i==numRows - 1) continue;
+                    if (2 * j * (numRows - 1) + i + 2 * (numRows - 1 - i) >= slen) break;
                     else {
-                        ret += s[2 * j * (numRows - 1) + i];
-                    }
-                }
-            } else {
-                for (int j = 0;; j++) {
-                    if (2 * j * (numRows - 1) + i >= slen) break;
-                    else {
-                        ret += s[2 * j * (numRows - 1) + i];
-                        if (2 * j * (numRows - 1) + i + 2 * (numRows - 1 - i) >= slen) break;
-                        else {
-                            ret += s[2 * j * (numRows - 1) + i + 2 * (numRows - 1 - i)];
-                        }
+                        ret += s[2 * j * (numRows - 1) + i + 2 * (numRows - 1 - i)];
                     }
                 }
             }
