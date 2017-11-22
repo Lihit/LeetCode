@@ -21,24 +21,21 @@ public:
     vector<int> countBits(int num) {
         vector<int> ret;
         vector<int> tmp(32);
+        ret.push_back(0);
         for(int i=1;i<=num;i++){
-            if(tmp[31]==0){
-                ret.push_back(ret[i-1]+1);
-            }else{
-                int count=0,flag=1;
-                for(int j=31;i>=0;j--){
-                    if(tmp[j]+flag==2){
-                        tmp[j]=0;
-                        count++;
-                        flag=1;
-                    }
-                    else{
-                        tmp[j]=flag;
-                        break;
-                    }
+            int count=0,flag=1;
+            for(int j=31;i>=0;j--){
+                if(tmp[j]+flag==2){
+                    tmp[j]=0;
+                    count++;
+                    flag=1;
                 }
-                ret.push_back(ret[i-1]-count+1);
+                else{
+                    tmp[j]=flag;
+                    break;
+                }
             }
+            ret.push_back(ret[i-1]-count+1);
         }
         return ret;
     }
