@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LeetCode.dir/main.cpp.o"
+  "CMakeFiles/LeetCode.dir/main.cpp.obj"
   "LeetCode.pdb"
-  "LeetCode"
+  "LeetCode.exe"
+  "LeetCode.exe.manifest"
+  "libLeetCode.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

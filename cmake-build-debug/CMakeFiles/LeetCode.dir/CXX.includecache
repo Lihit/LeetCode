@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/wenshao/MyProjects/LeetCode/main.cpp
+C:/MyProjects/LeetCode/main.cpp
 iostream
+-
+vector
+-
+stack
+-
+string
+-
+algorithm
+-
+map
+-
+unordered_map
+-
+stack
 -
 
