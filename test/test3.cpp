@@ -4,13 +4,15 @@
 
 using namespace std;
 
+int& use_count(){
+    static int uc=0;
+    return uc;
+}
 int main()
 {
-   int x=0;
-   //int *p=&x++;
-   //cout<<*p<<endl;
-   int *p1=&(++x);
-   cout<<*p1<<endl;
-
+   cout<<++use_count()<<endl;
+   cout<<++use_count()<<endl;
+   cout<<++use_count()<<endl;
+   //cout<<uc<<endl;
    return 0;
 }
