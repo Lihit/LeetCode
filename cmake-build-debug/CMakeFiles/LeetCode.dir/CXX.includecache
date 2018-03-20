@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/MyProjects/LeetCode/main.cpp
+/home/wenshao/MyProjects/LeetCode/main.cpp
 iostream
 -
 vector
