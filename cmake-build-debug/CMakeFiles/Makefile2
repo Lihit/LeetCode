@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/wenshao/MyProjects/LeetCode
 CMAKE_BINARY_DIR = /home/wenshao/MyProjects/LeetCode/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/LeetCode.dir
+# Target rules for target CMakeFiles/main.cpp.dir
 
 # All Build rule for target.
-CMakeFiles/LeetCode.dir/all:
-	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/depend
-	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wenshao/MyProjects/LeetCode/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target LeetCode"
-.PHONY : CMakeFiles/LeetCode.dir/all
+CMakeFiles/main.cpp.dir/all:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/depend
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wenshao/MyProjects/LeetCode/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target main.cpp"
+.PHONY : CMakeFiles/main.cpp.dir/all
 
 # Include target in all.
-all: CMakeFiles/LeetCode.dir/all
+all: CMakeFiles/main.cpp.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/LeetCode.dir/rule: cmake_check_build_system
+CMakeFiles/main.cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wenshao/MyProjects/LeetCode/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LeetCode.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wenshao/MyProjects/LeetCode/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/LeetCode.dir/rule
+.PHONY : CMakeFiles/main.cpp.dir/rule
 
 # Convenience name for target.
-LeetCode: CMakeFiles/LeetCode.dir/rule
+main.cpp: CMakeFiles/main.cpp.dir/rule
 
-.PHONY : LeetCode
-
-# clean rule for target.
-CMakeFiles/LeetCode.dir/clean:
-	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/clean
-.PHONY : CMakeFiles/LeetCode.dir/clean
+.PHONY : main.cpp
 
 # clean rule for target.
-clean: CMakeFiles/LeetCode.dir/clean
+CMakeFiles/main.cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/clean
+.PHONY : CMakeFiles/main.cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/main.cpp.dir/clean
 
 .PHONY : clean
 

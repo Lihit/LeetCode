@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/LeetCode.dir/main.cpp.o  -o LeetCode 
+/usr/bin/c++    -std=c++11 -l pthread -g   CMakeFiles/LeetCode.dir/main.cpp.o  -o LeetCode  -L/usr/include 
