@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/wenshao/MyProjects/LeetCode/main.cpp
+C:/MyProjects/LeetCode/main.cpp
 iostream
 -
-unordered_set
+algorithm
+-
+functional
+-
+vector
 -
 string
--
-tuple
--
-regex
 -
 
