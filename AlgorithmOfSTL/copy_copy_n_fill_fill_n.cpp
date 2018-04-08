@@ -85,6 +85,6 @@ void main4(){
     }
 }
 int main() {
-    main4();
+    Print(11,"22");
     return 0;
 }
